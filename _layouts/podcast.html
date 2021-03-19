@@ -25,15 +25,16 @@ container_class: "podcast pt-40 lg:pt-40"
   <h3>Description</h3>
   {{ page.summary }}
 
-<div class="flex pt-24 justify-center grid grid-cols-2 col-gap-16 max-w-3xl mx-auto">
+
+<div class="flex pt-24 justify-center grid grid-rows-2 grid-cols-2 row-gap-12 md:grid-rows-1 md:row-gap-0 md:col-gap-16 max-w-3xl mx-auto">
   {% if page.next.url %}
-    <div class="text-left">
+    <div class="text-left row-start-1 row-end-2 col-start-1 col-end-3 md:row-auto md:col-auto">
       <div class="pb-4 text-md opacity-55">Next Podcast</div>
       <a href="{{page.next.url }}" class="text-3xl tracking-tight font-extrabold leading-none break-normal">{{page.next.title}}</a>
     </div>
   {% endif %}
   {% if page.previous.url %}
-    <div class="text-right">
+    <div class="text-right row-start-2 row-end-3 col-start-1 md:col-start-2 col-end-3 md:row-auto">
       <div class="pb-4 text-md opacity-55">Previous Podcast</div>
       <a href="{{page.previous.url }}" class="text-3xl tracking-tight font-extrabold leading-none break-normal">{{page.previous.title}}</a>
     </div>
